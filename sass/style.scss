@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+// color variables
+$dark: rgb(44, 46, 49);
+$white: #ffffff;
+$body: rgb(249, 249, 249);
+$gray: #dddddd;
+$dark-gray: #333333;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: $body;
+}
+.container {
+  height: 50vh;
+  width: 100vw;
+  position: relative;
+  background-color: $dark;
+  #title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, -5%);
+    color: $white;
+  }
+  #description {
+    font-size: 1.5rem;
+    font-weight: 400;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -20%);
+    color: $white;
+  }
+  #content-box {
+    position: relative;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60rem;
+    height: 35rem;
+    background-color: $white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    #content-box-header {
+      position: relative;
+      height: 12rem;
+      width: 60rem;
+      background-color: $body;
+      border-bottom: 0.1rem solid $gray;
+      #avatar {
+        position: relative;
+        top: 4rem;
+        left: 50%;
+        transform: translate(-50%);
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+        border: 0.1rem solid $gray;
+        display: grid;
+        place-items: center;
+        z-index: 2;
+        img {
+          width: 13rem;
+          height: 13rem;
+          border-radius: inherit;
+        }
+      }
+    }
+    #content-box-body {
+      position: relative;
+      #meta-content {
+        position: absolute;
+        top: 8rem;
+        left: 50%;
+        font-size: 1.5rem;
+        color: $dark-gray;
+        transform: translate(-50%);
+      }
+      #meta-name {
+        position: absolute;
+        top: 10rem;
+        left: 50%;
+        font-size: 2rem;
+        color: $dark-gray;
+        transform: translate(-50%);
+        text-transform: capitalize;
+        letter-spacing: 0.2rem;
+      }
+      #menu {
+        position: absolute;
+        top: 18rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .menu-item {
+          font-size: 2rem;
+          margin: .2rem 4rem;
+          color: $dark-gray;
+          cursor: pointer;
+          &:hover {
+            color: green;
+          }
+        }
+        .active {
+            color: green;
+        }
+      }
+    }
+  }
+}
