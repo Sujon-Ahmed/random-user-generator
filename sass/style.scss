@@ -69,10 +69,31 @@ body {
         display: grid;
         place-items: center;
         z-index: 2;
+        cursor: pointer;
+        &:hover {
+            #newBtn {
+                visibility: visible;
+            }
+        }
         img {
           width: 13rem;
           height: 13rem;
           border-radius: inherit;
+        }
+        #newBtn {
+          position: absolute;
+          width: 6rem;
+          height: 3rem;
+          border: none;
+          color: $white;
+          border-radius: 0.3rem;
+          background-color: $dark;
+          left: 50%;
+          top: 13rem;
+          z-index: 3;
+          transform: translate(-50%);
+          cursor: pointer;
+          visibility: hidden;
         }
       }
     }
@@ -80,7 +101,7 @@ body {
       position: relative;
       #meta-content {
         position: absolute;
-        top: 8rem;
+        top: 9rem;
         left: 50%;
         font-size: 1.5rem;
         color: $dark-gray;
@@ -88,7 +109,7 @@ body {
       }
       #meta-name {
         position: absolute;
-        top: 10rem;
+        top: 11rem;
         left: 50%;
         font-size: 2rem;
         color: $dark-gray;
@@ -104,7 +125,7 @@ body {
         justify-content: space-between;
         .menu-item {
           font-size: 2rem;
-          margin: .2rem 4rem;
+          margin: 0.2rem 4rem;
           color: $dark-gray;
           cursor: pointer;
           &:hover {
@@ -112,7 +133,7 @@ body {
           }
         }
         .active {
-            color: green;
+          color: green;
         }
       }
     }
