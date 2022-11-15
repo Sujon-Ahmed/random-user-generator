@@ -19,27 +19,38 @@ function sujon(data) {
     $("#user-avatar").attr("src", info.picture.large);
 }
 
-$('#user').click(function () {
+
+$('#user').mouseenter(function () {
     $(this).addClass('active');
-    $('#envelope, #calender, #map-marker, #phone-alt, #lock').removeClass('active');
+    $('#envelope, #calender, #map-marker, #phone-alt, #lock').removeClass('active');   
+    $('#meta-content').text('My name is');
+    // $('#meta-name').text('Sujon Ahmed');
+    $("#meta-name").text(info.name.first + " " + data.results[0].name.last);
 });
-$('#envelope').click(function () {
+$('#envelope').mouseenter(function () {
     $(this).addClass('active');
     $('#user, #calender, #map-marker, #phone-alt, #lock').removeClass('active');
+    $('#meta-content').text('My email address is');
+    $("#meta-name").text(data.results[0].email);
+    // $("#meta-name").text('sujonahmed5284@gmail.com');
 });
-$('#calender').click(function () {
+$('#calender').mouseenter(function () {
     $(this).addClass('active');
     $('#user, #envelope, #map-marker, #phone-alt, #lock').removeClass('active');
+    $('#meta-content').text('My birthday is');
 });
-$('#map-marker').click(function () {
+$('#map-marker').mouseenter(function () {
     $(this).addClass('active');
     $('#user, #envelope, #calender, #phone-alt, #lock').removeClass('active');
+    $('#meta-content').text('My address is');
 });
-$('#phone-alt').click(function () {
+$('#phone-alt').mouseenter(function () {
     $(this).addClass('active');
     $('#user, #envelope, #calender, #map-marker , #lock').removeClass('active');
+    $('#meta-content').text('My phone number is');
 });
-$('#lock').click(function () {
+$('#lock').mouseenter(function () {
     $(this).addClass('active');
     $('#user, #envelope, #calender, #map-marker , #phone-alt').removeClass('active');
+    $('#meta-content').text('My password is');
 });
