@@ -18,3 +18,28 @@ function sujon(data) {
     $("#meta-name").text(info.name.first + " " + data.results[0].name.last);
     $("#user-avatar").attr("src", info.picture.large);
 }
+
+$('#user').click(function () {
+    $(this).addClass('active');
+    $('#envelope, #calender, #map-marker, #phone-alt, #lock').removeClass('active');
+});
+$('#envelope').click(function () {
+    $(this).addClass('active');
+    $('#user, #calender, #map-marker, #phone-alt, #lock').removeClass('active');
+});
+$('#calender').click(function () {
+    $(this).addClass('active');
+    $('#user, #envelope, #map-marker, #phone-alt, #lock').removeClass('active');
+});
+$('#map-marker').click(function () {
+    $(this).addClass('active');
+    $('#user, #envelope, #calender, #phone-alt, #lock').removeClass('active');
+});
+$('#phone-alt').click(function () {
+    $(this).addClass('active');
+    $('#user, #envelope, #calender, #map-marker , #lock').removeClass('active');
+});
+$('#lock').click(function () {
+    $(this).addClass('active');
+    $('#user, #envelope, #calender, #map-marker , #phone-alt').removeClass('active');
+});
