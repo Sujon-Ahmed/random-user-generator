@@ -123,6 +123,8 @@ body {
   text-transform: capitalize;
   letter-spacing: 0.2rem;
   display: inline-block;
+  width: 100%;
+  text-align: center;
 }
 .container #content-box #content-box-body #menu {
   position: absolute;
